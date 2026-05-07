@@ -1,0 +1,22 @@
+{
+  "product": {
+    "repository": "offline-safe-notes",
+    "title": "オフライン安全メモ"
+  },
+  "items": [
+    {
+      "id": "offline-safe-notes-happy",
+      "title": "オフライン安全メモ happy",
+      "status": "ready",
+      "tags": [
+        "androidapp",
+        "closed-alpha"
+      ],
+      "category": "防災",
+      "secretLevel": "local-only",
+      "body": "非常時の連絡先と保管場所",
+      "accessPlan": "オフラインで参照",
+      "backupHint": "暗号化エクスポート前に確認"
+    }
+  ]
+}
