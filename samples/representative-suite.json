@@ -1,0 +1,126 @@
+[
+  {
+    "id": "happy-path",
+    "purpose": "オフライン安全メモ の正常入力を検証する",
+    "items": [
+      {
+        "id": "offline-safe-notes-happy",
+        "title": "オフライン安全メモ happy",
+        "status": "ready",
+        "tags": [
+          "androidapp",
+          "closed-alpha"
+        ],
+        "category": "防災",
+        "secretLevel": "local-only",
+        "body": "非常時の連絡先と保管場所",
+        "accessPlan": "オフラインで参照",
+        "backupHint": "暗号化エクスポート前に確認"
+      }
+    ],
+    "expected": {
+      "result": "passed",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "id": "missing-required",
+    "purpose": "必須項目不足を error として検出する",
+    "items": [
+      {
+        "id": "offline-safe-notes-missing",
+        "status": "ready",
+        "tags": [
+          "androidapp",
+          "closed-alpha"
+        ],
+        "category": "防災",
+        "secretLevel": "local-only",
+        "body": "非常時の連絡先と保管場所",
+        "accessPlan": "オフラインで参照",
+        "backupHint": "暗号化エクスポート前に確認"
+      }
+    ],
+    "expected": {
+      "result": "failed",
+      "errors": 1,
+      "warnings": 0
+    }
+  },
+  {
+    "id": "warning",
+    "purpose": "推奨項目不足を warning として検出する",
+    "items": [
+      {
+        "id": "offline-safe-notes-warning",
+        "title": "オフライン安全メモ warning",
+        "status": "ready",
+        "tags": [
+          "androidapp",
+          "closed-alpha"
+        ],
+        "category": "防災",
+        "secretLevel": "local-only",
+        "body": "非常時の連絡先と保管場所",
+        "accessPlan": "オフラインで参照"
+      }
+    ],
+    "expected": {
+      "result": "warning",
+      "errors": 0,
+      "warnings": 1
+    }
+  },
+  {
+    "id": "mixed-batch",
+    "purpose": "正常、必須不足、警告を同一バッチで集計する",
+    "items": [
+      {
+        "id": "offline-safe-notes-happy",
+        "title": "オフライン安全メモ happy",
+        "status": "ready",
+        "tags": [
+          "androidapp",
+          "closed-alpha"
+        ],
+        "category": "防災",
+        "secretLevel": "local-only",
+        "body": "非常時の連絡先と保管場所",
+        "accessPlan": "オフラインで参照",
+        "backupHint": "暗号化エクスポート前に確認"
+      },
+      {
+        "id": "offline-safe-notes-missing",
+        "status": "ready",
+        "tags": [
+          "androidapp",
+          "closed-alpha"
+        ],
+        "category": "防災",
+        "secretLevel": "local-only",
+        "body": "非常時の連絡先と保管場所",
+        "accessPlan": "オフラインで参照",
+        "backupHint": "暗号化エクスポート前に確認"
+      },
+      {
+        "id": "offline-safe-notes-warning",
+        "title": "オフライン安全メモ warning",
+        "status": "ready",
+        "tags": [
+          "androidapp",
+          "closed-alpha"
+        ],
+        "category": "防災",
+        "secretLevel": "local-only",
+        "body": "非常時の連絡先と保管場所",
+        "accessPlan": "オフラインで参照"
+      }
+    ],
+    "expected": {
+      "result": "failed",
+      "errors": 1,
+      "warnings": 1
+    }
+  }
+]
