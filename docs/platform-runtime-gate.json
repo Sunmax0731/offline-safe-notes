@@ -1,0 +1,14 @@
+{
+  "product": "offline-safe-notes",
+  "title": "オフライン安全メモ",
+  "domain": "AndroidApp",
+  "ideaNo": 11,
+  "platformType": "android-emulator",
+  "expectedPublicTarget": "Google Play",
+  "browser": null,
+  "android": {
+    "packageName": "com.sunmax0731.offlinesafenotes",
+    "evidence": "dist/android-emulator-result.json"
+  },
+  "evidence": "dist/platform-runtime-gate-result.json"
+}
